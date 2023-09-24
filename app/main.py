@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 
-# from routes import prediction
+from routes.prediction import router as prediction_router
 
 app = FastAPI()
 
-# app.include_router(prediction.router, prefix="/api")
+app.include_router(prediction_router, prefix="/api")
 
 
 @app.get("/")
